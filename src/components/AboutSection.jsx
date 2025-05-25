@@ -50,7 +50,7 @@ export const AboutSection = () => {
 
           <div className="flex flex-col justify-start items-start gap-2">
             {aboutCard.map(({ Icon, title, detail }, index) => (
-              <div key={index} className="bg-card rounded-xl p-3 flex items-center gap-3">
+              <div key={index} className="max-w-[450px] mx-auto bg-card rounded-xl p-3 flex items-center gap-3">
                 <div className="p-2 rounded-[50%] bg-icon-bg">
                   <Icon className="text-accent" />
                 </div>

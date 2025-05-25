@@ -15,7 +15,7 @@ export const ProjectCard = ({ projectData }) => {
           className="relative bg-card rounded-xl overflow-hidden space-y-3 pb-10"
         >
           <img
-            className="h-60 w-full rounded-xl hover:scale-[1.05] transition-transform duration-300 ease"
+            className="h-60 w-full hover:scale-[1.05] transition-transform duration-300 ease"
             src={project.image[0]} alt={project.title} />
 
           <div className="flex flex-wrap justify-start items-center gap-2 px-2">
@@ -32,10 +32,10 @@ export const ProjectCard = ({ projectData }) => {
           <p className="text-alter-font text-sm/4 text-center px-2">{project.description}</p>
 
           <div className="absolute bottom-2 left-2 flex items-center gap-2">
-            <a href={project.github} target="_blank" className="hover:-translate-y-1 transition-all duration-300 ease">
+            <a href={project.github} target="_blank" className="hover:-translate-y-1 transition-all duration-300 ease" onClick={e => e.stopPropagation()}>
               <Github />
             </a>
-            <a href={project.demo} target="_blank" className="hover:-translate-y-1 transition-all duration-300 ease">
+            <a href={project.demo} target="_blank" className="hover:-translate-y-1 transition-all duration-300 ease" onClick={e => e.stopPropagation()}>
               <ExternalLink />
             </a>
           </div>

@@ -4,6 +4,7 @@ import { Navbar } from "@/components/Navbar";
 import { HeroSection } from "@/components/HeroSection";
 import { AboutSection } from "@/components/AboutSection";
 import { ProjectSection } from "@/components/Project/ProjectSection";
+import { SkillsSection } from "@/components/Skills/SkillsSection";
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <HeroSection  />
         <AboutSection />
         <ProjectSection />
+        <SkillsSection />
     </>
   )
 }
