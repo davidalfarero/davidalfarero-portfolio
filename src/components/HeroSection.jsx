@@ -11,12 +11,14 @@ export const HeroSection = () => {
 
   return (
     <main
+      id="home"
       className="min-h-screen max-w-4xl mx-auto flex justify-center items-center px-2"
     >
       <div className="space-y-10">
-        <h2 className="text-2xl text-center font-semibold">Hi, I'm David <span className="inline-block animate-wave">🤘</span></h2>
+        <h2 className="w-fit mx-auto text-2xl text-center font-semibold p-2 rounded bg-alter-bg">
+          Hi, I'm David <span className="inline-block animate-wave">🤘</span></h2>
         <h1 className="text-5xl text-accent text-center h-25 md:text-6xl md:max-w-md mx-auto font-black">{typedText}<span className="animate-blink"> | </span></h1>
-        <p className="text-alter-font text-center max-w-md mx-auto">I build responsive, accessible, and clean UIs using HTML, CSS, and JavaScript.
+        <p className="section-description">I build responsive, accessible, and clean UIs using HTML, CSS, and JavaScript.
           Every line of code is written with user experience in mind.</p>
         <div className="flex items-center justify-center gap-4">
           <a 
@@ -26,9 +28,9 @@ export const HeroSection = () => {
           </a>
 
           <a 
-          className="seconday-btn"
+          className="secondary-btn"
           href="#projects">
-            Let's Talk <Phone size={18} />
+            Let's Talk <Phone size={15} />
           </a>
         </div>
       </div>

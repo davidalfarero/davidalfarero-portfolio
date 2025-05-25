@@ -21,6 +21,7 @@
   --color-accent: var(--accent);
 
   --color-hover: var(--hover);
+  --color-icon-bg: var(--icon-bg);
 }
 
 @layer base {
@@ -33,6 +34,7 @@
     --line: #333945;
     --accent: #57C4DB;
     --hover: #1c2a4c;
+    --icon-bg: #286774;
   }
 
   .light {
@@ -44,6 +46,7 @@
     --line: #EBECF0;
     --accent: #087EA4;
     --hover: #ececec;
+    --icon-bg: #cbcaca;
   }
 
   html {
@@ -53,15 +56,6 @@
   body {
     @apply bg-bg text-font
   }
-}
-
-@utility section-container {
-  max-width: 900px;
-  @apply mx-auto pt-20 px-2 pb-10;
-}
-
-@utility section-title {
-  @apply text-3xl text-center font-extrabold mb-10;
 }
 
 @layer utilities {
@@ -74,11 +68,35 @@
   }
 
   .main-btn {
-    @apply flex items-center gap-2 w-fit p-3 bg-accent md:p-5 rounded-4xl transition-transform duration-300 hover:scale-105;
+    @apply flex items-center text-white cursor-pointer text-sm gap-2 w-fit bg-accent p-3 rounded-4xl transition-transform duration-300 hover:scale-105;
   }
 
-  .seconday-btn {
-    @apply text-accent flex items-center gap-2 border border-accent w-fit p-3 md:p-5 rounded-4xl transition-transform duration-300 hover:scale-105;
+  .secondary-btn {
+    @apply text-accent text-sm flex cursor-pointer items-center gap-2 border border-accent w-fit p-3 rounded-4xl transition-transform duration-300 hover:scale-105;
+  }
+
+  .section-container {
+    max-width: 900px;
+    @apply mx-auto pt-10 md:pt-12 px-2 pb-10;
+  }
+
+  .section-title {
+    @apply text-3xl text-center font-extrabold mb-3;
+  }
+
+  .section-description {
+    @apply text-alter-font text-sm text-center max-w-md mx-auto;
+  }
+
+  .grid-responsive {
+    display: grid;
+    grid-template-columns: 60% 40%;
+  }
+
+  @media (max-width: 1000px) {
+    .grid-responsive {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
   }
 }
 
@@ -123,4 +141,9 @@
   100% {
     transform: rotate(0deg);
   }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  font-weight: 900;
 }

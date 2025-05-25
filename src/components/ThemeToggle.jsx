@@ -31,7 +31,7 @@ export const ThemeToggle = ({isMenuOpen}) => {
 
   return (
     <div
-      className="absolute top-2 left-1/2 -translate-x-1/2 w-fit rounded p-1 flex justify-center items-center
+      className="fixed top-2 left-1/2 -translate-x-1/2 w-fit rounded p-1 flex justify-center items-center
       hover:bg-hover transition-all duration-500 ease cursor-pointer z-40"
     >
       <button

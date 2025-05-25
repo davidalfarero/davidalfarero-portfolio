@@ -1,8 +1,9 @@
+import React, { useState, useEffect } from 'react';
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { Navbar } from "@/components/Navbar";
 import { HeroSection } from "@/components/HeroSection";
-import React, { useState, useEffect } from 'react';
 import { AboutSection } from "@/components/AboutSection";
+import { ProjectSection } from "@/components/Project/ProjectSection";
 
 
 function App() {
@@ -10,12 +11,11 @@ function App() {
 
   return (
     <>
-      <div>
         <ThemeToggle isMenuOpen={isMenuOpen} />
         <Navbar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
         <HeroSection  />
         <AboutSection />
-      </div>
+        <ProjectSection />
     </>
   )
 }
