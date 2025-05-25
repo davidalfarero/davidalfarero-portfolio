@@ -1,0 +1,156 @@
+import React, { useRef } from 'react';
+import { Mail, Phone, MapPin } from 'lucide-react';
+import { FaFacebook, FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaUpwork } from "react-icons/fa6";
+import { toast } from 'react-toastify';
+import emailjs from '@emailjs/browser';
+
+export const ContactSection = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm(
+      'service_2mjf153',
+      'template_pzk56bh',
+      form.current,
+      'blK9AkpoRTAL_qOwb'
+    )
+      .then((result) => {
+        toast.success('Message sent!', {
+          style: {
+            background: '#1e1e2f',
+            color: '#f4f4f4',
+            fontFamily: 'Poppins, sans-serif',
+          },
+          position: 'bottom-right',
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          theme: 'dark',
+        });
+        form.current.reset();
+      })
+      .catch((error) => {
+        toast.error('Failed to send message', {
+          position: 'bottom-right',
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          theme: 'dark',
+        });
+      });
+  };
+
+  return (
+    <section id="contact" classsName="p-2">
+      <div className="section-container">
+        <h2 className="section-title">Connect With <span className="text-accent">Me</span></h2>
+        <p className="section-description mb-10 md:mb-20">Got a project or idea you'd like to share? I'd love to hear from you and see how we can collaborate.</p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div className="flex flex-col justify-between items-start">
+            <div>
+              <h3 className="text-center text-xl font-bold mb-5">Contact Information</h3>
+              <div className="flex items-center justify-start space-x-5 mb-5">
+                <div className="p-3 rounded-[50%] bg-card">
+                  <Mail className="text-accent" />
+                </div>
+                <div>
+                  <p className="font-bold">Email</p>
+                  <p className="text-alter-font">david.alfarero@gmail.com</p>
+                </div>
+              </div>
+              <div className="flex items-center justify-start space-x-5 mb-5">
+                <div className="p-3 rounded-[50%] bg-card">
+                  <Phone className="text-accent" />
+                </div>
+                <div>
+                  <p className="font-bold">Phone</p>
+                  <p className="text-alter-font">&#40;+63&#41; 969-3662-932</p>
+                </div>
+              </div>
+              <div className="flex items-center justify-start space-x-5 mb-5">
+                <div className="p-3 rounded-[50%] bg-card">
+                  <MapPin className="text-accent" />
+                </div>
+                <div>
+                  <p className="font-bold">Location</p>
+                  <p className="text-alter-font">San Pablo City, Laguna, Philippines</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-2">
+              <div className="bg-blue-500 p-2 rounded-3xl">
+                <a href="" target="_blank"><FaLinkedin size={30} /></a>
+              </div>
+
+              <div className="bg-green-500 p-2 rounded-3xl">
+                <a href="" target="_blank"><FaUpwork size={30} /></a>
+              </div>
+
+              <div className="bg-blue-500 p-2 rounded-3xl">
+                <a href="" target="_blank"><FaFacebook size={30} /></a>
+              </div>
+
+              <div className="bg-card p-2 rounded-3xl">
+                <a href="" target="_blank"><FaGithub size={30} /></a>
+              </div>
+            </div>
+          </div>
+
+          <div
+            className="p-4 sm:p-6 md:p-8 bg-card w-full rounded max-w-[450px]"
+          >
+            <h3 className="text-center text-xl font-bold mb-5">Send a Message</h3>
+
+            <form ref={form} onSubmit={sendEmail} className="flex flex-col justify-between">
+
+              <input
+                id="name"
+                type="text"
+                name="name"
+                placeholder="Name"
+                required
+                autocomplete="off"
+                className="p-2 rounded bg-input placeholder-alter-font border border-line mb-5 focus:outline-none focus:border-accent"
+              />
+
+              <input
+                id="email"
+                type="email"
+                name="email"
+                placeholder="example@mail.com"
+                required
+                autocomplete="off"
+                className="p-2 rounded bg-input placeholder-alter-font border border-line mb-5 focus:outline-none focus:border-accent"
+              />
+
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Message"
+                rows="5"
+                className="p-2 rounded bg-input placeholder-alter-font border border-line mb-5 focus:outline-none focus:border-accent resize-none "
+              ></textarea>
+
+              <button type="submit"
+                className="w-full bg-accent text-white p-2 rounded font-medium overflow-hidden 
+                transition duration-300 ease hover:bg-hover cursor-pointer"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  )
+}

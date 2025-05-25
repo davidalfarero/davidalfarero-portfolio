@@ -12,10 +12,10 @@ export const ProjectCard = ({ projectData }) => {
         <div
           onClick={() => setSelectedProject(project)}
           key={index}
-          className="relative bg-card rounded-xl overflow-hidden space-y-3 pb-10"
+          className="relative bg-card rounded-xl overflow-hidden space-y-3 pb-10 max-w-[400px] mx-auto"
         >
           <img
-            className="h-60 w-full hover:scale-[1.05] transition-transform duration-300 ease"
+            className="h-40 w-full hover:scale-[1.05] transition-transform duration-300 ease"
             src={project.image[0]} alt={project.title} />
 
           <div className="flex flex-wrap justify-start items-center gap-2 px-2">
