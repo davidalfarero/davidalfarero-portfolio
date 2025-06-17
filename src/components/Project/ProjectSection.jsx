@@ -1,7 +1,7 @@
+import { ChevronDown, ChevronUp } from "lucide-react";
+import { useState } from 'react';
 import { ProjectCard } from "./ProjectCard";
 import { projectData } from "./projectData";
-import React, { useState } from 'react';
-import { ChevronUp, ChevronDown } from "lucide-react";
 
 
 
@@ -19,9 +19,9 @@ export const ProjectSection = () => {
 
         <button className="secondary-btn mx-auto" onClick={() => setIsAllProjects(prev => !prev)}>
           {isAllProjects ? 'Collapse' : 'Explore More Projects'}
-          {isAllProjects ? <ChevronUp size={18}/> : <ChevronDown size={18} />}
+          {isAllProjects ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
         </button>
       </div>
     </section>
-  )
-}
+  );
+};
