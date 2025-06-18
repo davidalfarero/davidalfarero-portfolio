@@ -17,10 +17,10 @@ export const ProjectSection = () => {
 
         <ProjectCard projectData={visibleProjects} />
 
-        <button className="secondary-btn mx-auto" onClick={() => setIsAllProjects(prev => !prev)}>
+        {/* <button className="secondary-btn mx-auto" onClick={() => setIsAllProjects(prev => !prev)}>
           {isAllProjects ? 'Collapse' : 'Explore More Projects'}
           {isAllProjects ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
-        </button>
+        </button> */}
       </div>
     </section>
   );

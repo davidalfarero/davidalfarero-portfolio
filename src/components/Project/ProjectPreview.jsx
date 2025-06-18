@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { X, Github, ExternalLink } from 'lucide-react';
 import "swiper/css";
 import "swiper/css/navigation";
@@ -71,14 +71,8 @@ export const ProjectPreview = ({ project, onClose }) => {
               </a>
             </div>
           </div>
-
-
-
         </div>
       </div>
-
-
-
     </div>
-  )
-}
+  );
+};

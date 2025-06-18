@@ -1,6 +1,6 @@
 import { ProjectPreview } from "./ProjectPreview";
 import { Github, ExternalLink } from 'lucide-react';
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 
 export const ProjectCard = ({ projectData }) => {
@@ -12,17 +12,17 @@ export const ProjectCard = ({ projectData }) => {
         <div
           onClick={() => setSelectedProject(project)}
           key={index}
-          className="relative bg-card rounded-xl overflow-hidden space-y-3 pb-10 max-w-[400px] mx-auto"
+          className="relative bg-card rounded-xl border border-card shadow-xl overflow-hidden space-y-3 pb-10 max-w-[400px] mx-auto"
         >
           <img
             className="h-40 w-full hover:scale-[1.05] transition-transform duration-300 ease"
             src={project.image[0]} alt={project.title} />
 
           <div className="flex flex-wrap justify-start items-center gap-2 px-2">
-            {project.TagIcons.map((Icon, index) => (
+            {project.Icon.map(({ icon: IconComponent, color, name }, index) => (
               <div key={index} className="flex items-center gap-1 p-1 border border-accent rounded-xl">
-                <Icon className="text-accent" />
-                <p className="text-xs">{project.tags[index]}</p>
+                <IconComponent fill={color} />
+                <p className="text-xs">{name}</p>
               </div>
             ))}
 
@@ -51,5 +51,5 @@ export const ProjectCard = ({ projectData }) => {
       )}
 
     </div>
-  )
-}
+  );
+};

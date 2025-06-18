@@ -16,7 +16,7 @@ function App() {
 
   return (
     <>
-      {!isLoaded && <LoadingScreen onComplete={() => setIsLoaded(true)} />}
+      {/* {!isLoaded && <LoadingScreen onComplete={() => setIsLoaded(true)} />} */}
       <ThemeToggle isMenuOpen={isMenuOpen} />
       <Navbar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       <HeroSection />
@@ -37,7 +37,7 @@ function App() {
         theme="dark"
       />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

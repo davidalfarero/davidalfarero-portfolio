@@ -1,6 +1,21 @@
+import { motion } from 'framer-motion';
 import { ArrowDownToLine, CodeXml, Palette, Rocket, UsersRound } from 'lucide-react';
 
 export const AboutSection = () => {
+  const containerVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.5,
+      },
+    },
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, x: 50 },
+    visible: { opacity: 1, x: 0 },
+  };
+
   const aboutCard = [
     {
       Icon: CodeXml,
@@ -22,7 +37,7 @@ export const AboutSection = () => {
       title: 'Collaboration Ready',
       detail: 'I thrive in collaborative environments and value clear communication, feedback, and shared goals in every build.'
     },
-  ]
+  ];
 
   return (
     <section id="about" className="p-2 bg-alter-bg">
@@ -48,23 +63,34 @@ export const AboutSection = () => {
             </button>
           </div>
 
-          <div className="flex flex-col justify-start items-start gap-2">
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.3 }}
+            className="flex flex-col justify-start items-start gap-2"
+          >
             {aboutCard.map(({ Icon, title, detail }, index) => (
-              <div key={index} className="max-w-[450px] mx-auto bg-card rounded-xl p-3 flex items-center gap-3">
+              <motion.div
+                key={index}
+                variants={cardVariants}
+                transition={{ duration: 0.5 }}
+                className="max-w-[450px] mx-auto bg-card rounded-xl p-3 flex items-center gap-3"
+              >
                 <div className="p-2 rounded-[50%] bg-icon-bg">
                   <Icon className="text-accent" />
                 </div>
                 <div className="space-y-1">
                   <h3 className="text-sm font-bold">{title}</h3>
-                  <p className="text-alter-font text-sm/4">
-                    {detail}
-                  </p>
+                  <p className="text-alter-font text-sm/4">{detail}</p>
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
+
+
         </div>
       </div>
     </section>
-  )
-}
+  );
+};

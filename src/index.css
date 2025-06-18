@@ -33,7 +33,7 @@
     --alter-font: #c5c6c8;
     --card: #1c2a4c;
     --line: #333945;
-    --accent: #57C4DB;
+    --accent: #57c4db;
     --hover: #1c2a4c;
     --icon-bg: #286774;
     --input: #263961;
@@ -45,8 +45,8 @@
     --font: #111827;
     --alter-font: #4f545f;
     --card: #ececec;
-    --line: #EBECF0;
-    --accent: #087EA4;
+    --line: #ebecf0;
+    --accent: #087ea4;
     --hover: #ececec;
     --icon-bg: #cbcaca;
     --input: #f9f9f9;
@@ -57,7 +57,7 @@
   }
 
   body {
-    @apply bg-bg text-font
+    @apply bg-bg text-font;
   }
 }
 
@@ -75,11 +75,11 @@
   }
 
   .main-btn {
-    @apply flex items-center text-white cursor-pointer text-sm gap-2 w-fit bg-accent p-3 rounded-4xl transition-transform duration-300 hover:scale-105;
+    @apply inline-flex items-center gap-2 text-sm font-medium text-white bg-accent px-5 py-3 rounded-full shadow-md transition hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent/50;
   }
 
   .secondary-btn {
-    @apply text-accent text-sm flex cursor-pointer items-center gap-2 border border-accent w-fit p-3 rounded-4xl transition-transform duration-300 hover:scale-105;
+    @apply inline-flex items-center gap-2 text-sm font-medium text-accent border border-accent px-5 py-3 rounded-full transition hover:scale-105 hover:bg-accent/10 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent/30;
   }
 
   .section-container {
@@ -118,7 +118,6 @@
 }
 
 @keyframes blink {
-
   0%,
   100% {
     opacity: 1;
@@ -130,7 +129,6 @@
 }
 
 @keyframes wave {
-
   0% {
     transform: rotate(0deg);
   }
