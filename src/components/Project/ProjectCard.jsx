@@ -19,12 +19,15 @@ export const ProjectCard = ({ projectData }) => {
             src={project.image[0]} alt={project.title} />
 
           <div className="flex flex-wrap justify-start items-center gap-2 px-2">
-            {project.Icon.map(({ icon: IconComponent, color, name }, index) => (
-              <div key={index} className="flex items-center gap-1 p-1 border border-accent rounded-xl">
-                <IconComponent fill={color} />
-                <p className="text-xs">{name}</p>
-              </div>
-            ))}
+            {project.Icon.map((IconComponent, index) => {
+              return (
+                <div key={index} className="flex items-center gap-1 p-1 border border-accent rounded-xl">
+                  <IconComponent className="w-4 h-4" />
+                  <p className="text-xs">{project.tags[index]}</p>
+                </div>
+              );
+            })}
+
 
           </div>
 

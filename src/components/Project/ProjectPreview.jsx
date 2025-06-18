@@ -54,12 +54,14 @@ export const ProjectPreview = ({ project, onClose }) => {
             <p className="text-sm text-alter-font mb-10">{project.details}</p>
 
             <div className="flex flex-wrap justify-start items-center gap-2 mb-8">
-              {project.TagIcons.map((Icon, index) => (
-                <div key={index} className="flex items-center gap-1 p-1 border border-accent rounded-xl text-xs">
-                  <Icon className="text-accent" />
-                  <p>{project.tags[index]}</p>
-                </div>
-              ))}
+              {project.Icon.map((IconComponent, index) => {
+                return (
+                  <div key={index} className="flex items-center gap-1 p-1 border border-accent rounded-xl">
+                    <IconComponent className="w-4 h-4" />
+                    <p className="text-xs">{project.tags[index]}</p>
+                  </div>
+                );
+              })}
             </div>
 
             <div className="mt-5 flex flex-col sm:flex-row gap-3">
