@@ -16,6 +16,7 @@
   --color-alter-font: var(--alter-font);
 
   --color-card: var(--card);
+  --color-card-font: var(--card-font);
   --color-line: var(--line);
 
   --color-accent: var(--accent);
@@ -44,7 +45,6 @@
     --alter-bg: #f5f5f5;
     --font: #111827;
     --alter-font: #4f545f;
-    --card: #ececec;
     --line: #ebecf0;
     --accent: #087ea4;
     --hover: #ececec;
@@ -161,4 +161,15 @@
 .swiper-button-next,
 .swiper-button-prev {
   font-weight: 900;
+}
+
+.scrollbox::-webkit-scrollbar {
+  width: 8px;
+}
+.scrollbox::-webkit-scrollbar-track {
+  background: #1e1e2f;
+}
+.scrollbox::-webkit-scrollbar-thumb {
+  background-color: #00bcd4;
+  border-radius: 6px;
 }

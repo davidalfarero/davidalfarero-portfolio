@@ -27,7 +27,7 @@ export const SkillsSection = () => {
             {skillsCard.map((skill, index) => (
               <div key={index} className="group relative rounded-xl bg-card h-20 w-20 overflow-hidden">
                 <span
-                  className="absolute top-1 left-1/2 -translate-x-1/2 text-xs/2.5 font-semibold opacity-0 
+                  className="absolute top-1 left-1/2 -translate-x-1/2 text-white text-xs/2.5 font-semibold opacity-0 
                   group-hover:opacity-100 transition-opacity duration-300 ease"
                 >
                   {skill.name}
@@ -51,5 +51,5 @@ export const SkillsSection = () => {
       </div>
 
     </section>
-  )
-}
+  );
+};

@@ -108,7 +108,7 @@ export const ContactSection = () => {
           <div
             className="p-4 sm:p-6 md:p-8 bg-card w-full rounded max-w-[450px]"
           >
-            <h3 className="text-center text-xl font-bold mb-5">Send a Message</h3>
+            <h3 className="text-center text-white text-xl font-bold mb-5">Send a Message</h3>
 
             <form ref={form} onSubmit={sendEmail} className="flex flex-col justify-between">
 
@@ -141,8 +141,7 @@ export const ContactSection = () => {
               ></textarea>
 
               <button type="submit"
-                className="w-full bg-accent text-white p-2 rounded font-medium overflow-hidden 
-                transition duration-300 ease hover:bg-hover cursor-pointer"
+                className="w-full bg-accent text-white p-2 rounded font-medium overflow-hidden cursor-pointer"
               >
                 Send Message
               </button>
@@ -152,5 +151,5 @@ export const ContactSection = () => {
       </div>
 
     </section>
-  )
-}
+  );
+};

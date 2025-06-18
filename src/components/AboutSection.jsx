@@ -81,8 +81,8 @@ export const AboutSection = () => {
                   <Icon className="text-accent" />
                 </div>
                 <div className="space-y-1">
-                  <h3 className="text-sm font-bold">{title}</h3>
-                  <p className="text-alter-font text-sm/4">{detail}</p>
+                  <h3 className="text-sm text-white font-bold">{title}</h3>
+                  <p className="text-white/70 text-sm/4">{detail}</p>
                 </div>
               </motion.div>
             ))}

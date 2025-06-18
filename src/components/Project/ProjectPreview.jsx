@@ -48,17 +48,25 @@ export const ProjectPreview = ({ project, onClose }) => {
           </div>
 
 
-          <div className="relative bg-bg px-5 py-10 h-full">
-            <h1 className="text-xl sm:text-2xl md:text-3xl font-bold mb-5">{project.title}</h1>
+          <div className="relative bg-card px-5 py-10 h-full">
+            <h1 className="text-xl text-white sm:text-2xl md:text-3xl font-bold mb-5">{project.title}</h1>
 
-            <p className="text-sm text-alter-font mb-10">{project.details}</p>
+            <div className="max-h-[250px] overflow-y-auto pr-2 scrollbox mb-6">
+              {project.details.split('\n\n').map((para, index) => (
+                <p key={index} className="text-sm text-white mb-4">
+                  {para}
+                </p>
+              ))}
+            </div>
+
+            <p className='font-bold mb-2'>Technologies</p>
 
             <div className="flex flex-wrap justify-start items-center gap-2 mb-8">
               {project.Icon.map((IconComponent, index) => {
                 return (
                   <div key={index} className="flex items-center gap-1 p-1 border border-accent rounded-xl">
                     <IconComponent className="w-4 h-4" />
-                    <p className="text-xs">{project.tags[index]}</p>
+                    <p className="text-xs text-white ">{project.tags[index]}</p>
                   </div>
                 );
               })}

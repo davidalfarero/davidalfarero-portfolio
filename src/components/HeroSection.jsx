@@ -7,7 +7,7 @@ export const HeroSection = () => {
     'UI Enthusiast',
     'Code Craftsman',
     'Lifelong Learner',
-  ])
+  ]);
 
   return (
     <main
@@ -18,22 +18,21 @@ export const HeroSection = () => {
         <h2 className="w-fit mx-auto text-2xl text-center font-semibold p-2 rounded bg-alter-bg">
           Hi, I'm David <span className="inline-block animate-wave">🤘</span></h2>
         <h1 className="text-5xl text-accent text-center h-25 md:text-6xl md:max-w-md mx-auto font-black">{typedText}<span className="animate-blink"> | </span></h1>
-        <p className="section-description">I build responsive, accessible, and clean UIs using HTML, CSS, and JavaScript.
-          Every line of code is written with user experience in mind.</p>
+        <p className="section-description">Engineer of responsive UIs, API integrations, and interactive web applications.</p>
         <div className="flex items-center justify-center gap-4">
-          <a 
-          className="bg-accent main-btn"
-          href="#projects">
+          <a
+            className="bg-accent main-btn"
+            href="#projects">
             View Projects <CircleChevronDown size={18} />
           </a>
 
-          <a 
-          className="secondary-btn"
-          href="#projects">
+          <a
+            className="secondary-btn"
+            href="#contact">
             Let's Talk <Phone size={15} />
           </a>
         </div>
       </div>
     </main>
-  )
-}
+  );
+};
