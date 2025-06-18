@@ -1,12 +1,62 @@
-# React + Vite
+# 💼 David's Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A personal web developer portfolio built with **React + Vite**, styled with **TailwindCSS**, and deployed on **Vercel**.  
+This site highlights my featured projects, tech skills, and developer journey.
 
-Currently, two official plugins are available:
+## 🔍 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🖥️ Responsive and accessible design
+- ⚡ Fast-loading pages (Vite-powered)
+- 🎨 Light/Dark theme toggle
+- 📁 Reusable components and clean UI
+- 🔍 Project modals with slideshows and tech stack
+- 🧠 Built with user experience and performance in mind
 
-## Expanding the ESLint configuration
+## 🚀 Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**Frontend**
+
+- React (Vite)
+- TailwindCSS
+- DaisyUI
+- SimpleIcons (custom tech stack icons)
+
+**Deployment**
+
+- Vercel
+
+<!-- Todo -->
+<!-- ## 📸 Screenshots -->
+
+<!-- | Hero Section                    | Project Modal                     |
+| ------------------------------- | --------------------------------- |
+| ![Hero](./screenshots/hero.png) | ![Modal](./screenshots/modal.png) |
+
+> 📁 _Screenshots go in the `/screenshots` folder for markdown previews._ -->
+
+## 📂 Project Structure
+
+```bash
+portfolio/
+├── public/
+├── src/
+│   ├── components/
+│   ├── Hook/
+│   ├── icons/
+│   └── app.jsx
+├── package.json
+└── vite.config.js
+
+```
+
+## 🧠 Author
+
+**David [@davidalfarero](https://github.com/davidalfarero)**  
+Frontend & Backend Developer
+
+Portfolio: [myportfolio.com](https://react-portfolio-nine-rust.vercel.app/)  
+Email: [david.alfarero@gmail.com](mailto:david.alfarero@gmail.com)
+
+## 📜 License
+
+This project is licensed under the [MIT License](LICENSE).
