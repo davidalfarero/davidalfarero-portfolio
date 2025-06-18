@@ -48,7 +48,7 @@ export const ContactSection = () => {
   };
 
   return (
-    <section id="contact" classsName="p-2">
+    <section id="contact" className="p-2">
       <div className="section-container">
         <h2 className="section-title">Connect With <span className="text-accent">Me</span></h2>
         <p className="section-description mb-10 md:mb-20">Got a project or idea you'd like to share? I'd love to hear from you and see how we can collaborate.</p>
@@ -118,7 +118,7 @@ export const ContactSection = () => {
                 name="name"
                 placeholder="Name"
                 required
-                autocomplete="off"
+                autoComplete="off"
                 className="p-2 rounded bg-input placeholder-alter-font border border-line mb-5 focus:outline-none focus:border-accent"
               />
 
@@ -128,7 +128,7 @@ export const ContactSection = () => {
                 name="email"
                 placeholder="example@mail.com"
                 required
-                autocomplete="off"
+                autoComplete="off"
                 className="p-2 rounded bg-input placeholder-alter-font border border-line mb-5 focus:outline-none focus:border-accent"
               />
 
