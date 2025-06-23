@@ -80,7 +80,7 @@ const Navbar = () => {
       {/* mobile menu button */}
       <button
         onClick={() => setIsMenuOpen((prev) => !prev)}
-        className="md:hidden fixed top-5 right-5 z-60"
+        className="text-base-content md:hidden fixed top-5 right-5 z-60"
       >
         {isMenuOpen ? <X /> : <Menu />}
       </button>

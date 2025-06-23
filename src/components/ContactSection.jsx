@@ -1,15 +1,17 @@
-import React, { useRef } from 'react';
-import { Mail, Phone, MapPin } from 'lucide-react';
-import { FaFacebook, FaLinkedin, FaGithub } from "react-icons/fa";
+import emailjs from '@emailjs/browser';
+import { LoaderCircle, Mail, MapPin, Phone } from 'lucide-react';
+import { useRef, useState } from 'react';
+import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaUpwork } from "react-icons/fa6";
 import { toast } from 'react-toastify';
-import emailjs from '@emailjs/browser';
 
 export const ContactSection = () => {
   const form = useRef();
+  const [isLoading, setIsloading] = useState(false);
 
-  const sendEmail = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
+    setIsloading(true);
 
     emailjs.sendForm(
       'service_2mjf153',
@@ -33,6 +35,7 @@ export const ContactSection = () => {
           theme: 'dark',
         });
         form.current.reset();
+        setIsloading(false);
       })
       .catch((error) => {
         toast.error('Failed to send message', {
@@ -71,7 +74,7 @@ export const ContactSection = () => {
                   <Phone className="text-primary" />
                 </div>
                 <div>
-                  <p className="font-bold">Phone</p>
+                  <p className="font-bold text-base-content">Phone</p>
                   <p className="text-base-content">&#40;+63&#41; 969-3662-932</p>
                 </div>
               </div>
@@ -109,9 +112,7 @@ export const ContactSection = () => {
             className="p-4 sm:p-6 md:p-8 bg-card w-full rounded max-w-[450px]"
           >
             <h3 className="text-center text-base-content text-xl font-bold mb-5">Send a Message</h3>
-
-            <form ref={form} onSubmit={sendEmail} className="flex flex-col justify-between">
-
+            <form ref={form} onSubmit={handleSubmit} className="flex flex-col justify-between">
               <input
                 id="name"
                 type="text"
@@ -119,9 +120,8 @@ export const ContactSection = () => {
                 placeholder="Name"
                 required
                 autoComplete="off"
-                className="p-2 rounded bg-input placeholder-alter-font border border-line mb-5 focus:outline-none focus:border-primary"
+                className="p-2 rounded bg-input placeholder-base-content/50 border border-base-content/50 mb-5 focus:outline-none focus:border-primary"
               />
-
               <input
                 id="email"
                 type="email"
@@ -129,21 +129,23 @@ export const ContactSection = () => {
                 placeholder="example@mail.com"
                 required
                 autoComplete="off"
-                className="p-2 rounded bg-input placeholder-alter-font border border-line mb-5 focus:outline-none focus:border-primary"
+                className="p-2 rounded bg-input placeholder-base-content/50 border border-base-content/50 mb-5 focus:outline-none focus:border-primary"
               />
-
               <textarea
                 id="message"
                 name="message"
                 placeholder="Message"
                 rows="5"
-                className="p-2 rounded bg-input placeholder-alter-font border border-line mb-5 focus:outline-none focus:border-primary resize-none "
+                className="p-2 rounded bg-input placeholder-base-content/50 border border-base-content/50 mb-5 focus:outline-none focus:border-primary resize-none "
               ></textarea>
-
-              <button type="submit"
-                className="w-full bg-primary text-white p-2 rounded font-medium overflow-hidden cursor-pointer"
+              <button
+                type="submit"
+                className={`w-full bg-primary text-white p-2 rounded font-medium overflow-hidden cursor-pointer
+                  ${isLoading ? 'bg-gray-500 cursor-not-allowed' : 'bg-primary'}
+                  `}
+                disabled={isLoading}
               >
-                Send Message
+                {isLoading ? <LoaderCircle className='animate-spin mx-auto' /> : 'Submit'}
               </button>
             </form>
           </div>

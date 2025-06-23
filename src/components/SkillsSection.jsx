@@ -25,7 +25,7 @@ export const SkillsSection = () => {
 
           <div className="place-self-start flex flex-wrap gap-2 justify-start items-center">
             {skillsCard.map((skill, index) => (
-              <div key={index} className="group relative rounded-xl bg-card h-20 w-20 overflow-hidden">
+              <div key={index} className="group relative rounded-xl bg-[#0F172A] h-20 w-20 overflow-hidden">
                 <span
                   className="absolute top-1 left-1/2 -translate-x-1/2 text-white text-xs/2.5 font-semibold opacity-0 
                   group-hover:opacity-100 transition-opacity duration-300 ease"
