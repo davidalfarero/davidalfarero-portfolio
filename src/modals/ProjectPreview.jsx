@@ -1,12 +1,22 @@
-import { useEffect } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { X, Github, ExternalLink } from 'lucide-react';
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation } from 'swiper/modules';
+import { SwiperNavButtons } from '../styles/UI';
 
 export const ProjectPreview = ({ project, onClose }) => {
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
+  const [swiperReady, setSwiperReady] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(1);
+
+  useEffect(() => {
+    setSwiperReady(true);
+  }, []);
+
   useEffect(() => {
     document.body.style.overflow = 'hidden';
     return () => {
@@ -16,35 +26,53 @@ export const ProjectPreview = ({ project, onClose }) => {
 
   return (
     <div
-      className="fixed inset-0 bg-black/60 flex items-center justify-center z-50"
+      className="fixed inset-0 bg-black/60 flex items-center justify-center z-100"
     >
       <div className="bg-black w-[90%] h-[90%] z-40 rounded-3xl overflow-hidden">
 
         <div className="relative h-full w-full grid-responsive overflow-y-auto">
 
           <div className="absolute top-3 right-3 p-1 z-50 rounded-2xl bg-hover">
-            <X onClick={onClose} className="text-white" />
+            <X onClick={onClose} className="text-gray-300" />
           </div>
 
-          <div className="flex bg-alter-bg items-center justify-center">
-            <Swiper
-              modules={[Navigation, Pagination]}
-              navigation
-              pagination={{ clickable: true }}
-              spaceBetween={30}
-              slidesPerView={1}
-              speed={1000}
-            >
-              {project.image.map((imgSrc, idx) => (
-                <SwiperSlide key={idx}>
-                  <img
-                    className=" w-full max-h-[60vh] sm:max-h-[70vh] object-contain"
-                    src={imgSrc}
-                    alt={`${project.title} slide ${idx + 1}`}
-                  />
-                </SwiperSlide>
-              ))}
-            </Swiper>
+          <div className="relative flex items-center justify-center">
+
+            {swiperReady && (
+              <Swiper
+                modules={[Navigation]}
+                spaceBetween={16}
+                slidesPerView={1}
+                navigation={{
+                  prevEl: prevRef.current,
+                  nextEl: nextRef.current,
+                }}
+                onBeforeInit={(swiper) => {
+                  swiper.params.navigation.prevEl = prevRef.current;
+                  swiper.params.navigation.nextEl = nextRef.current;
+                }}
+                onSlideChange={(swiper) => {
+                  setCurrentSlide(swiper.realIndex + 1);
+                }}
+              >
+                {project.image.map((imgSrc, idx) => (
+                  <SwiperSlide key={idx}>
+                    <img
+                      className=" w-full max-h-[60vh] sm:max-h-[70vh] object-contain z-10"
+                      src={imgSrc}
+                      alt={`${project.title} slide ${idx + 1}`}
+                    />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            )}
+
+
+            <SwiperNavButtons prevRef={prevRef} nextRef={nextRef} />
+
+            <div className='absolute bottom-6 left-4 h-5 w-11 bg-gray-300 text-neutral-800 px-2 py-4 rounded flex items-center z-20'>
+              <p className='text-sm font-semibold'>{currentSlide}/{project.image.length}</p>
+            </div>
           </div>
 
 
