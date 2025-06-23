@@ -48,7 +48,7 @@ export const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="p-2">
+    <section id="contact" className="p-2 bg-base-100">
       <div className="section-container">
         <h2 className="section-title">Connect With <span className="text-primary">Me</span></h2>
         <p className="section-description mb-10 md:mb-20">Got a project or idea you'd like to share? I'd love to hear from you and see how we can collaborate.</p>

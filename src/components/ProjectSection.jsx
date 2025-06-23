@@ -9,7 +9,7 @@ export const ProjectSection = () => {
   const visibleProjects = isAllProjects ? projectData : projectData.slice(0, 3);
 
   return (
-    <section id="projects" className="p-2">
+    <section id="projects" className="p-2 bg-base-100">
       <div className="section-container">
         <h2 className="section-title">Crafted <span className="text-primary">Work</span></h2>
         <p className="section-description mb-10 md:mb-20">Projects that reflect my commitment to clean code, responsive design, and user-first experiences.</p>

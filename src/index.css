@@ -36,7 +36,7 @@ body {
   }
 
   .section-title {
-    @apply text-3xl text-center font-extrabold mb-3 w-fit mx-auto p-2 rounded-xl bg-base-content/10;
+    @apply text-3xl text-center text-base-content font-extrabold mb-3 w-fit mx-auto p-2 rounded-xl bg-base-content/10;
   }
 
   .section-description {

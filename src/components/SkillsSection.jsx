@@ -10,7 +10,7 @@ export const SkillsSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
           <div className="space-y-3">
-            <h2 className="text-center text-lg font-bold max-w-xs mx-auto">
+            <h2 className="text-center text-base-content text-lg font-bold max-w-xs mx-auto">
               Technologies and Tools 💻
             </h2>
             <p className="text-base-content/80 text-sm md:text-base">

@@ -50,7 +50,7 @@ export const AboutSection = () => {
           className="grid grid-cols-1 md:grid-cols-2 gap-4"
         >
           <div className="space-y-3">
-            <h2 className="text-center font-bold max-w-xs mx-auto">
+            <h2 className="text-center text-base-content font-bold max-w-xs mx-auto">
               Web Developer Focused on Clean Code & Smart Design
             </h2>
             <p className="section-description">
@@ -87,7 +87,7 @@ export const AboutSection = () => {
                 </div>
 
                 <div className="space-y-1">
-                  <h3 className="text-sm font-bold">{title}</h3>
+                  <h3 className="text-sm text-base-content font-bold">{title}</h3>
                   <p className="text-base-content/60 text-sm/4">{detail}</p>
                 </div>
               </motion.div>
