@@ -1,8 +1,6 @@
 import emailjs from '@emailjs/browser';
 import { LoaderCircle, Mail, MapPin, Phone } from 'lucide-react';
 import { useRef, useState } from 'react';
-import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
-import { FaUpwork } from "react-icons/fa6";
 import { toast } from 'react-toastify';
 
 export const ContactSection = () => {
@@ -86,24 +84,6 @@ export const ContactSection = () => {
                   <p className="font-bold text-base-content">Location</p>
                   <p className="text-base-content">San Pablo City, Laguna, Philippines</p>
                 </div>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-2">
-              <div className="bg-blue-500 p-2 rounded-3xl">
-                <a href="" target="_blank"><FaLinkedin size={30} /></a>
-              </div>
-
-              <div className="bg-green-500 p-2 rounded-3xl">
-                <a href="" target="_blank"><FaUpwork size={30} /></a>
-              </div>
-
-              <div className="bg-blue-500 p-2 rounded-3xl">
-                <a href="" target="_blank"><FaFacebook size={30} /></a>
-              </div>
-
-              <div className="bg-base-300 p-2 rounded-3xl">
-                <a href="" target="_blank"><FaGithub size={30} /></a>
               </div>
             </div>
           </div>

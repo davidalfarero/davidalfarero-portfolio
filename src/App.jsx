@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import { ProjectSection } from "@/components/ProjectSection";
 import { SkillsSection } from "@/components/SkillsSection";
 import { ToastContainer } from 'react-toastify';
+import FooterSection from "./components/FooterSection";
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
       <ProjectSection />
       <SkillsSection />
       <ContactSection />
+      <FooterSection />
       <ToastContainer
         position="bottom-right"
         autoClose={3000}
