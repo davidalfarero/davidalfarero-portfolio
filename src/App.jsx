@@ -1,24 +1,18 @@
-import React, { useState, useEffect } from 'react';
-import { LoadingScreen } from "@/components/LoadingScreen";
-import { ThemeToggle } from "@/components/ThemeToggle";
-import { Navbar } from "@/components/Navbar";
-import { HeroSection } from "@/components/HeroSection";
 import { AboutSection } from "@/components/AboutSection";
+import { ContactSection } from "@/components/ContactSection";
+import { HeroSection } from "@/components/HeroSection";
+import Navbar from "@/components/Navbar";
 import { ProjectSection } from "@/components/Project/ProjectSection";
 import { SkillsSection } from "@/components/Skills/SkillsSection";
-import { ContactSection } from "@/components/ContactSection";
 import { ToastContainer } from 'react-toastify';
 
 
 function App() {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <>
       {/* {!isLoaded && <LoadingScreen onComplete={() => setIsLoaded(true)} />} */}
-      <ThemeToggle isMenuOpen={isMenuOpen} />
-      <Navbar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+      <Navbar />
       <HeroSection />
       <AboutSection />
       <ProjectSection />
