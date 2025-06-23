@@ -5,7 +5,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
-import { SwiperNavButtons } from '../styles/UI';
+import { SwiperNavLeft, SwiperNavRight } from '../styles/UI';
 
 export const ProjectPreview = ({ project, onClose }) => {
   const prevRef = useRef(null);
@@ -38,7 +38,7 @@ export const ProjectPreview = ({ project, onClose }) => {
 
           <div className="relative flex items-center justify-center">
 
-            {swiperReady && (
+            {swiperReady && prevRef.current && nextRef.current && (
               <Swiper
                 modules={[Navigation]}
                 spaceBetween={16}
@@ -58,7 +58,7 @@ export const ProjectPreview = ({ project, onClose }) => {
                 {project.image.map((imgSrc, idx) => (
                   <SwiperSlide key={idx}>
                     <img
-                      className=" w-full max-h-[60vh] sm:max-h-[70vh] object-contain z-10"
+                      className=" w-full mx-auto max-h-[60vh] sm:max-h-[70vh] object-contain z-10"
                       src={imgSrc}
                       alt={`${project.title} slide ${idx + 1}`}
                     />
@@ -68,10 +68,11 @@ export const ProjectPreview = ({ project, onClose }) => {
             )}
 
 
-            <SwiperNavButtons prevRef={prevRef} nextRef={nextRef} />
+            <SwiperNavLeft prevRef={prevRef} />
+            <SwiperNavRight nextRef={nextRef} />
 
-            <div className='absolute bottom-6 left-4 h-5 w-11 bg-gray-300 text-neutral-800 px-2 py-4 rounded flex items-center z-20'>
-              <p className='text-sm font-semibold'>{currentSlide}/{project.image.length}</p>
+            <div className='absolute bottom-6 left-4 h-5 w-15 bg-gray-300 text-neutral-800 px-2 py-4 rounded flex justify-center items-center z-20'>
+              <p className='text-sm font-semibold'>{currentSlide} / {project.image.length}</p>
             </div>
           </div>
 

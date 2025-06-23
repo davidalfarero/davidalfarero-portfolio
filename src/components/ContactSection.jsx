@@ -56,14 +56,14 @@ export const ContactSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           <div className="flex flex-col justify-between items-start">
             <div>
-              <h3 className="text-center text-xl font-bold mb-5">Contact Information</h3>
+              <h3 className="text-center text-xl text-base-content font-bold mb-5">Contact Information</h3>
               <div className="flex items-center justify-start space-x-5 mb-5">
                 <div className="p-3 rounded-[50%] bg-card">
                   <Mail className="text-primary" />
                 </div>
                 <div>
-                  <p className="font-bold">Email</p>
-                  <p className="text-alter-font">david.alfarero@gmail.com</p>
+                  <p className="font-bold text-base-content">Email</p>
+                  <p className="text-base-content">david.alfarero@gmail.com</p>
                 </div>
               </div>
               <div className="flex items-center justify-start space-x-5 mb-5">
@@ -72,7 +72,7 @@ export const ContactSection = () => {
                 </div>
                 <div>
                   <p className="font-bold">Phone</p>
-                  <p className="text-alter-font">&#40;+63&#41; 969-3662-932</p>
+                  <p className="text-base-content">&#40;+63&#41; 969-3662-932</p>
                 </div>
               </div>
               <div className="flex items-center justify-start space-x-5 mb-5">
@@ -80,8 +80,8 @@ export const ContactSection = () => {
                   <MapPin className="text-primary" />
                 </div>
                 <div>
-                  <p className="font-bold">Location</p>
-                  <p className="text-alter-font">San Pablo City, Laguna, Philippines</p>
+                  <p className="font-bold text-base-content">Location</p>
+                  <p className="text-base-content">San Pablo City, Laguna, Philippines</p>
                 </div>
               </div>
             </div>
@@ -99,7 +99,7 @@ export const ContactSection = () => {
                 <a href="" target="_blank"><FaFacebook size={30} /></a>
               </div>
 
-              <div className="bg-card p-2 rounded-3xl">
+              <div className="bg-base-300 p-2 rounded-3xl">
                 <a href="" target="_blank"><FaGithub size={30} /></a>
               </div>
             </div>
@@ -108,7 +108,7 @@ export const ContactSection = () => {
           <div
             className="p-4 sm:p-6 md:p-8 bg-card w-full rounded max-w-[450px]"
           >
-            <h3 className="text-center text-white text-xl font-bold mb-5">Send a Message</h3>
+            <h3 className="text-center text-base-content text-xl font-bold mb-5">Send a Message</h3>
 
             <form ref={form} onSubmit={sendEmail} className="flex flex-col justify-between">
 

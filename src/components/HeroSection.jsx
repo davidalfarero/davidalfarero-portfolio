@@ -14,7 +14,7 @@ export const HeroSection = () => {
   return (
     <main
       id="home"
-      className="min-h-[calc(100vh-4rem)] bg-base-100 max-w-4xl mx-auto flex justify-center items-center mt-20"
+      className="min-h-screen bg-base-100 max-w-4xl mx-auto flex justify-center items-center pt-15 md:pt-20"
     >
       <div className="space-y-5">
         <h2 className="w-fit mx-auto text-2xl text-base-content text-center font-semibold p-2 rounded-xl bg-base-content/10">

@@ -15,7 +15,7 @@ const MetricCard = () => {
         <React.Fragment key={index}>
           <div className="md:flex gap-4 px-2">
             <div className="text-primary text-xl md:text-4xl font-bold">{metric.value}</div>
-            <div className="text-xs md:text-base font-semibold">{metric.label}</div>
+            <div className="text-xs md:text-base text-base-content font-semibold">{metric.label}</div>
           </div>
 
           {index < metrics.length - 1 && (
