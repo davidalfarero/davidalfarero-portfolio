@@ -1,11 +1,11 @@
-import { skillsCard } from "./skillsCard";
+import { skillsCard } from "../cards/skillsCard";
 
 export const SkillsSection = () => {
 
   return (
-    <section id="skills" className="bg-alter-bg">
+    <section id="skills" className="bg-base-300">
       <div className="section-container">
-        <h2 className="section-title">What I <span className="text-accent">Use</span></h2>
+        <h2 className="section-title">What I <span className="text-primary">Use</span></h2>
         <p className="section-description mb-10 md:mb-20">A showcase of the tools, technologies, and languages I use to build responsive, user-friendly web applications.</p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
@@ -13,7 +13,7 @@ export const SkillsSection = () => {
             <h2 className="text-center text-lg font-bold max-w-xs mx-auto">
               Technologies and Tools 💻
             </h2>
-            <p className="text-alter-font text-sm md:text-base">
+            <p className="text-base-content/80 text-sm md:text-base">
               I specialize in front-end development with a strong grasp of HTML, CSS, and JavaScript—the core
               technologies for building modern, responsive, and interactive web applications. I focus on writing clean,
               maintainable code and designing user-friendly interfaces that enhance the overall user experience. <br /><br />
@@ -33,7 +33,7 @@ export const SkillsSection = () => {
                   {skill.name}
                 </span>
                 <span
-                  className="absolute top-6 left-1/2 -translate-x-1/2 text-accent text-xs font-bold opacity-0 
+                  className="absolute top-6 left-1/2 -translate-x-1/2 text-primary text-xs font-bold opacity-0 
                   group-hover:opacity-100 transition-opacity duration-300 ease"
                 >
                   {skill.percent}

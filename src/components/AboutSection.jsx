@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { ArrowDownToLine, CodeXml, Palette, Rocket, UsersRound } from 'lucide-react';
+import { Button } from '../styles/UI';
 
 export const AboutSection = () => {
   const containerVariants = {
@@ -40,9 +41,9 @@ export const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="p-2 bg-alter-bg">
+    <section id="about" className="p-2 bg-base-300">
       <div className="section-container">
-        <h2 className="section-title">Behind The <span className="text-accent">Code</span></h2>
+        <h2 className="section-title">Behind The <span className="text-primary">Code</span></h2>
         <p className="section-description mb-10 md:mb-20">A brief introduction highlighting my background, skills, and passions as a web developer</p>
 
         <div
@@ -58,9 +59,13 @@ export const AboutSection = () => {
               <br></br><br></br> I’m constantly exploring new technologies and best practices to sharpen my skills and stay ahead in this fast-paced field.
               Whether I’m fine-tuning front-end interfaces or diving into JavaScript logic, I bring energy, focus, and a problem-solving mindset to every line of code.
             </p>
-            <button className="secondary-btn mx-auto">
-              Download CV <ArrowDownToLine size={18} />
-            </button>
+            <Button
+              href='/Alfarero_CV.pdf'
+              target="_blank"
+              className='w-fit bg-primary text-white mx-auto mt-10 '>
+              Download CV
+              <ArrowDownToLine />
+            </Button>
           </div>
 
           <motion.div
@@ -75,14 +80,15 @@ export const AboutSection = () => {
                 key={index}
                 variants={cardVariants}
                 transition={{ duration: 0.5 }}
-                className="max-w-[450px] mx-auto bg-card rounded-xl p-3 flex items-center gap-3"
+                className="max-w-[450px] mx-auto bg-primary/20 rounded-full p-3 flex items-center gap-3 shadow-lg"
               >
-                <div className="p-2 rounded-[50%] bg-icon-bg">
-                  <Icon className="text-accent" />
+                <div className="p-3 rounded-full bg-primary flex items-center justify-center">
+                  <Icon className="text-white size-8" />
                 </div>
+
                 <div className="space-y-1">
-                  <h3 className="text-sm text-white font-bold">{title}</h3>
-                  <p className="text-white/70 text-sm/4">{detail}</p>
+                  <h3 className="text-sm font-bold">{title}</h3>
+                  <p className="text-base-content/60 text-sm/4">{detail}</p>
                 </div>
               </motion.div>
             ))}

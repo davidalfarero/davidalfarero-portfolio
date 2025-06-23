@@ -11,8 +11,10 @@
   user-select: none;
 }
 
-html {
+html,
+body {
   @apply scroll-smooth;
+  overflow-x: hidden;
 }
 
 @layer utilities {
@@ -28,25 +30,17 @@ html {
     animation: blink 0.8s step-end infinite;
   }
 
-  .main-btn {
-    @apply inline-flex items-center gap-2 text-lg font-medium text-white bg-accent p-5 rounded-full shadow-md transition hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent/50;
-  }
-
-  .secondary-btn {
-    @apply inline-flex items-center gap-2 text-lg font-medium text-accent border border-accent p-5 rounded-full transition hover:scale-105 hover:bg-accent/10 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent/30;
-  }
-
   .section-container {
     max-width: 900px;
     @apply mx-auto pt-10 md:pt-12 px-2 pb-10;
   }
 
   .section-title {
-    @apply text-3xl text-center font-extrabold mb-3;
+    @apply text-3xl text-center font-extrabold mb-3 w-fit mx-auto p-2 rounded-xl bg-base-content/10;
   }
 
   .section-description {
-    @apply text-sm text-center max-w-md mx-auto;
+    @apply text-base-content/70 text-sm text-center max-w-md mx-auto;
   }
 
   .grid-responsive {

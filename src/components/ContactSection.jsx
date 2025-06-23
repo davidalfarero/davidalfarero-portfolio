@@ -50,7 +50,7 @@ export const ContactSection = () => {
   return (
     <section id="contact" className="p-2">
       <div className="section-container">
-        <h2 className="section-title">Connect With <span className="text-accent">Me</span></h2>
+        <h2 className="section-title">Connect With <span className="text-primary">Me</span></h2>
         <p className="section-description mb-10 md:mb-20">Got a project or idea you'd like to share? I'd love to hear from you and see how we can collaborate.</p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -59,7 +59,7 @@ export const ContactSection = () => {
               <h3 className="text-center text-xl font-bold mb-5">Contact Information</h3>
               <div className="flex items-center justify-start space-x-5 mb-5">
                 <div className="p-3 rounded-[50%] bg-card">
-                  <Mail className="text-accent" />
+                  <Mail className="text-primary" />
                 </div>
                 <div>
                   <p className="font-bold">Email</p>
@@ -68,7 +68,7 @@ export const ContactSection = () => {
               </div>
               <div className="flex items-center justify-start space-x-5 mb-5">
                 <div className="p-3 rounded-[50%] bg-card">
-                  <Phone className="text-accent" />
+                  <Phone className="text-primary" />
                 </div>
                 <div>
                   <p className="font-bold">Phone</p>
@@ -77,7 +77,7 @@ export const ContactSection = () => {
               </div>
               <div className="flex items-center justify-start space-x-5 mb-5">
                 <div className="p-3 rounded-[50%] bg-card">
-                  <MapPin className="text-accent" />
+                  <MapPin className="text-primary" />
                 </div>
                 <div>
                   <p className="font-bold">Location</p>
@@ -119,7 +119,7 @@ export const ContactSection = () => {
                 placeholder="Name"
                 required
                 autoComplete="off"
-                className="p-2 rounded bg-input placeholder-alter-font border border-line mb-5 focus:outline-none focus:border-accent"
+                className="p-2 rounded bg-input placeholder-alter-font border border-line mb-5 focus:outline-none focus:border-primary"
               />
 
               <input
@@ -129,7 +129,7 @@ export const ContactSection = () => {
                 placeholder="example@mail.com"
                 required
                 autoComplete="off"
-                className="p-2 rounded bg-input placeholder-alter-font border border-line mb-5 focus:outline-none focus:border-accent"
+                className="p-2 rounded bg-input placeholder-alter-font border border-line mb-5 focus:outline-none focus:border-primary"
               />
 
               <textarea
@@ -137,11 +137,11 @@ export const ContactSection = () => {
                 name="message"
                 placeholder="Message"
                 rows="5"
-                className="p-2 rounded bg-input placeholder-alter-font border border-line mb-5 focus:outline-none focus:border-accent resize-none "
+                className="p-2 rounded bg-input placeholder-alter-font border border-line mb-5 focus:outline-none focus:border-primary resize-none "
               ></textarea>
 
               <button type="submit"
-                className="w-full bg-accent text-white p-2 rounded font-medium overflow-hidden cursor-pointer"
+                className="w-full bg-primary text-white p-2 rounded font-medium overflow-hidden cursor-pointer"
               >
                 Send Message
               </button>

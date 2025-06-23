@@ -1,4 +1,4 @@
-import { ProjectPreview } from "./ProjectPreview";
+import { ProjectPreview } from "../modals/ProjectPreview";
 import { Github, ExternalLink } from 'lucide-react';
 import { useState } from 'react';
 
@@ -12,7 +12,7 @@ export const ProjectCard = ({ projectData }) => {
         <div
           onClick={() => setSelectedProject(project)}
           key={index}
-          className="relative bg-card rounded-xl border border-card shadow-xl overflow-hidden space-y-3 pb-10 max-w-[400px] mx-auto"
+          className="relative bg-primary/40 rounded-xl border border-base-content/60 shadow-xl overflow-hidden space-y-3 pb-10 max-w-[400px] mx-auto"
         >
 
           <div className='relative h-40 w-full overflow-hidden group'>
@@ -38,7 +38,7 @@ export const ProjectCard = ({ projectData }) => {
           <div className="flex flex-wrap justify-start items-center gap-2 px-2">
             {project.Icon.slice(0, 3).map((IconComponent, index) => {
               return (
-                <div key={index} className="flex items-center gap-1 p-1 border border-accent rounded-xl">
+                <div key={index} className="flex items-center gap-1 p-1 border border-primary rounded-xl">
                   <IconComponent className="w-4 h-4" />
                   <p className="text-xs text-white">{project.tags[index]}</p>
                 </div>

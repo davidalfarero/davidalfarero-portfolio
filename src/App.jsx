@@ -2,8 +2,8 @@ import { AboutSection } from "@/components/AboutSection";
 import { ContactSection } from "@/components/ContactSection";
 import { HeroSection } from "@/components/HeroSection";
 import Navbar from "@/components/Navbar";
-import { ProjectSection } from "@/components/Project/ProjectSection";
-import { SkillsSection } from "@/components/Skills/SkillsSection";
+import { ProjectSection } from "@/components/ProjectSection";
+import { SkillsSection } from "@/components/SkillsSection";
 import { ToastContainer } from 'react-toastify';
 
 
