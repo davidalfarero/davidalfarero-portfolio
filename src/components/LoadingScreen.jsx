@@ -15,7 +15,7 @@ export const LoadingScreen = ({ onComplete }) => {
 
         setTimeout(() => {
           onComplete();
-        }, 2000);
+        }, 1000);
       }
     }, 100);
 
@@ -23,12 +23,12 @@ export const LoadingScreen = ({ onComplete }) => {
   }, [onComplete]);
 
   return (
-    <div className="fixed inset-0 z-50 bg-bg text-font flex flex-col items-center justify-center">
-      <div className="mb-4 text-5xl text-font font-mono font-bold">
-        {text} <span className="animate-blink ml-1 text-font"> | </span>
+    <div className="fixed inset-0 bg-base-100 text-font flex flex-col items-center justify-center z-100">
+      <div className="mb-4 text-5xl text-base-content font-mono font-bold">
+        {text} <span className="animate-blink ml-1 text-base-content"> | </span>
       </div>
 
-      <div className="w-[400px] h-[5px] bg-alter-bg relative overflow-hidden">
+      <div className="w-[400px] h-[5px] bg-base-300 relative overflow-hidden">
         <div className="w-[30%] h-full bg-primary shadow-[0_0_15px_#3b82f6] animate-loading-bar"></div>
       </div>
     </div>

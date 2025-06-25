@@ -23,18 +23,20 @@ export const ProjectCard = ({ projectData }) => {
             />
           </div>
 
-          <h3 className="md:text-xl text-center text-white font-bold">{project.title}</h3>
-          <p className="text-xs text-center text-neutral-200 px-2">{project.description}</p>
+          <div className="h-[90px] md:h-[130px] flex flex-col justify-between">
+            <h3 className="md:text-xl text-center text-white font-bold">{project.title}</h3>
+            <p className="text-xs text-center text-neutral-200 px-2">{project.description}</p>
 
-          <div className="flex flex-wrap justify-start items-center gap-2 px-2">
-            {project.Icon.slice(0, 3).map((IconComponent, index) => {
-              return (
-                <div key={index} className="flex items-center gap-1 p-1 border border-gray-500 rounded-xl shadow-sm">
-                  <IconComponent className="w-4 h-4" />
-                  <p className="text-xs text-white">{project.tags[index]}</p>
-                </div>
-              );
-            })}
+            <div className="flex flex-wrap justify-start items-center gap-2 px-2">
+              {project.Icon.slice(0, 3).map((IconComponent, index) => {
+                return (
+                  <div key={index} className="flex items-center gap-1 p-1 border border-gray-500 rounded-xl shadow-sm">
+                    <IconComponent className="w-4 h-4" />
+                    <p className="text-xs text-white">{project.tags[index]}</p>
+                  </div>
+                );
+              })}
+            </div>
           </div>
 
           <div className="absolute bottom-2 left-2 flex items-center gap-2">

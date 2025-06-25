@@ -27,4 +27,23 @@ export const projectData = [
     github: 'https://github.com/davidalfarero/chat-app',
     demo: 'https://chat-app-ke5h.onrender.com/',
   },
+
+  {
+    image: [
+      '/dental-management-system/dental_app(1).png',
+      '/dental-management-system/dental_app(2).png',
+      '/dental-management-system/dental_app(3).png',
+      '/dental-management-system/dental_app(4).png',
+    ],
+    Icon: [ReactIcon, NodeIcon, ExpressIcon, BrevoIcon, TawilwindIcon, DaisyIcon],
+    tags: ['React', 'Nodejs', 'press', 'Brevo', 'TailwindCSS', 'DaisyUI'],
+    title: 'Dental Management System 🦷',
+    description:
+      'Manage dental clinic data and accept guest inquiries online.',
+    details: `The Dental Management System is a streamlined web application built to centralize and simplify essential clinic operations. It focuses on managing core information such as clinic details, dentist profiles, and staff records in an organized, easy-to-navigate dashboard. Designed with simplicity and clarity in mind, the system allows clinic administrators to view, update, and maintain data efficiently without unnecessary complexity.
+
+    For potential patients, the system includes a public-facing feature where guests can submit appointment requests or general inquiries. This ensures a smooth communication channel between the clinic and its clients without requiring logins or sign-ups. While the app keeps features minimal and focused, it lays the foundation for future enhancements such as appointment scheduling or patient tracking. It's a practical tool for small to mid-sized dental practices seeking a clean, functional way to manage internal information and receive client requests online.`,
+    github: 'https://github.com/davidalfarero/dental-management-system',
+    demo: 'https://dental-clinic-8503.onrender.com/',
+  },
 ];
