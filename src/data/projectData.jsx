@@ -17,8 +17,8 @@ export const projectData = [
       '/chatbuddy/chatapp-profilepage.png',
     ],
     Icon: [MongoDBIcon, ExpressIcon, ReactIcon, NodeIcon, BrevoIcon, JWTIcon, SocketIcon, TawilwindIcon, DaisyIcon],
-    tags: ['MongoDB', 'press', 'React', 'Nodejs', 'Brevo', 'JWT', 'Socket.io', 'TailwindCSS', 'DaisyUI'],
-    title: 'Chat Buddy 💬',
+    tags: ['Mongo', 'press', 'React', 'Nodejs', 'Brevo', 'JWT', 'Socket.io', 'TailwindCSS', 'DaisyUI'],
+    title: 'Chat Buddy',
     description:
       'A full-stack real-time messaging app built with the MERN stack.',
     details: `Chat Buddy is a real-time messaging platform built using the powerful MERN stack (MongoDB, Express, React, Node.js). It features secure user authentication, including email verification via Brevo, password resets, and JWT-based route protection. Real-time chat functionality is powered by Socket.IO, complete with typing indicators and instant message updates. Chat data and user profiles are persisted in MongoDB, ensuring a seamless experience across sessions.
@@ -37,7 +37,7 @@ export const projectData = [
     ],
     Icon: [ReactIcon, NodeIcon, ExpressIcon, BrevoIcon, TawilwindIcon, DaisyIcon],
     tags: ['React', 'Nodejs', 'press', 'Brevo', 'TailwindCSS', 'DaisyUI'],
-    title: 'Dental Management System 🦷',
+    title: 'Dental Management System',
     description:
       'Manage dental clinic data and accept guest inquiries online.',
     details: `The Dental Management System is a streamlined web application built to centralize and simplify essential clinic operations. It focuses on managing core information such as clinic details, dentist profiles, and staff records in an organized, easy-to-navigate dashboard. Designed with simplicity and clarity in mind, the system allows clinic administrators to view, update, and maintain data efficiently without unnecessary complexity.

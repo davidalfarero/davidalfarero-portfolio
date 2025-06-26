@@ -1,6 +1,5 @@
-import { ProjectPreview } from "../modals/ProjectPreview";
-import { Github, ExternalLink } from 'lucide-react';
 import { useState } from 'react';
+import { ProjectPreview } from "../modals/ProjectPreview";
 
 
 export const ProjectCard = ({ projectData }) => {
@@ -12,39 +11,43 @@ export const ProjectCard = ({ projectData }) => {
         <div
           onClick={() => setSelectedProject(project)}
           key={index}
-          className="relative bg-primary rounded-xl border border-base-content/60 shadow-xl overflow-hidden space-y-2 pb-10 max-w-[400px] mx-auto"
+          className="relative bg-[#1E293B] rounded-4xl shadow-lg overflow-hidden max-w-[400px] text-neutral-100"
         >
 
-          <div className='relative h-40 w-full overflow-hidden group'>
+          <div className='relative h-48'>
             <img
-              className="h-40 w-full group-hover:scale-[1.05] transition-transform duration-300 ease"
+              className="h-full w-full object-fit"
               src={project.image[0]}
               alt={project.title}
             />
+
+            <div className="absolute inset-0 bg-gradient-to-t from-[#1E293B] via-transparent to-transparent" />
           </div>
 
-          <div className="h-[90px] md:h-[130px] flex flex-col justify-between">
-            <h3 className="md:text-xl text-center text-white font-bold">{project.title}</h3>
-            <p className="text-xs text-center text-neutral-200 px-2">{project.description}</p>
+          <div className="p-4">
+            <div className="h-[100px]">
+              <h3 className="md:text-[17px] font-semibold">{project.title}</h3>
+              <p className="text-sm mt-1 text-neutral-300">{project.description}</p>
+            </div>
 
-            <div className="flex flex-wrap justify-start items-center gap-2 px-2">
-              {project.Icon.slice(0, 3).map((IconComponent, index) => {
+            <div className="flex flex-wrap gap-2 mt-3">
+              {project.Icon.slice(0, 2).map((IconComponent, index) => {
                 return (
-                  <div key={index} className="flex items-center gap-1 p-1 border border-gray-500 rounded-xl shadow-sm">
+                  <div key={index} className="flex items-center gap-1 bg-white/10 px-3 py-1 rounded-full text-sm">
                     <IconComponent className="w-4 h-4" />
-                    <p className="text-xs text-white">{project.tags[index]}</p>
+                    <snpan className="text-sm text-white">{project.tags[index]}</snpan>
                   </div>
                 );
               })}
             </div>
-          </div>
 
-          <div className="absolute bottom-2 left-2 flex items-center gap-2">
-            <a href={project.github} target="_blank" className="hover:-translate-y-1 transition-all duration-300 ease" onClick={e => e.stopPropagation()}>
-              <Github className="text-white" />
-            </a>
-            <a href={project.demo} target="_blank" className="hover:-translate-y-1 transition-all duration-300 ease" onClick={e => e.stopPropagation()}>
-              <ExternalLink className="text-white" />
+            <a
+              href={project.demo}
+              target="_blank"
+              className="block w-full mt-4 bg-neutral-100 text-neutral-900 text-center py-2 rounded-full hover:bg-neutral-300 transition"
+              onClick={e => e.stopPropagation()}
+            >
+              View Project
             </a>
           </div>
 
@@ -57,7 +60,6 @@ export const ProjectCard = ({ projectData }) => {
           onClose={() => setSelectedProject(null)}
         />
       )}
-
     </div>
   );
 };
