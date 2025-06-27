@@ -1,6 +1,6 @@
 import { BrevoIcon, ChromeIcon, CloudinaryIcon, CSSIcon, DaisyIcon, ExpressIcon, GeminiIcon, GitHubIcon, GitIcon, HTMLIcon, JSIcon, JWTIcon, MongoDBIcon, NodeIcon, ReactIcon, SocketIcon, TawilwindIcon, VSCodeIcon } from "../icons/TechIcons";
 
-export const skillsCard = [
+export const skillsData = [
   {
     Icon: HTMLIcon,
     name: 'HTML',

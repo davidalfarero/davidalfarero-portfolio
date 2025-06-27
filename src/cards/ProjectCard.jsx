@@ -6,12 +6,12 @@ export const ProjectCard = ({ projectData }) => {
   const [selectedProject, setSelectedProject] = useState(false);
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 cursor-pointer mb-5">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 cursor-pointer mb-5">
       {projectData.map((project, index) => (
         <div
           onClick={() => setSelectedProject(project)}
           key={index}
-          className="relative bg-[#1E293B] rounded-4xl shadow-lg overflow-hidden max-w-[400px] text-neutral-100"
+          className="relative rounded-4xl shadow-lg overflow-hidden max-w-[400px] text-neutral-100"
         >
 
           <div className='relative h-48'>
@@ -24,14 +24,14 @@ export const ProjectCard = ({ projectData }) => {
             <div className="absolute inset-0 bg-gradient-to-t from-[#1E293B] via-transparent to-transparent" />
           </div>
 
-          <div className="p-4">
+          <div className="p-4 bg-[#1E293B]">
             <div className="h-[100px]">
               <h3 className="md:text-[17px] font-semibold">{project.title}</h3>
               <p className="text-sm mt-1 text-neutral-300">{project.description}</p>
             </div>
 
             <div className="flex flex-wrap gap-2 mt-3">
-              {project.Icon.slice(0, 2).map((IconComponent, index) => {
+              {project.Icon.slice(0, 3).map((IconComponent, index) => {
                 return (
                   <div key={index} className="flex items-center gap-1 bg-white/10 px-3 py-1 rounded-full text-sm">
                     <IconComponent className="w-4 h-4" />
