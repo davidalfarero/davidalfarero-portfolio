@@ -35,7 +35,7 @@ export const ProjectCard = ({ projectData }) => {
                 return (
                   <div key={index} className="flex items-center gap-1 bg-white/10 px-3 py-1 rounded-full text-sm">
                     <IconComponent className="w-4 h-4" />
-                    <snpan className="text-sm text-white">{project.tags[index]}</snpan>
+                    <span className="text-sm text-white">{project.tags[index]}</span>
                   </div>
                 );
               })}

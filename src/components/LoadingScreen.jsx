@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 export const LoadingScreen = ({ onComplete }) => {
   const [text, setText] = useState("");
-  const fullText = "{ Hello World /}";
+  const fullText = "<HelloWorld />";
 
   useEffect(() => {
     let index = 0;
@@ -24,7 +24,7 @@ export const LoadingScreen = ({ onComplete }) => {
 
   return (
     <div className="fixed inset-0 bg-base-100 text-font flex flex-col items-center justify-center z-100">
-      <div className="mb-4 text-5xl text-base-content font-mono font-bold">
+      <div className="mb-4 text-4xl sm:text-5xl text-base-content font-mono font-bold">
         {text} <span className="animate-blink ml-1 text-base-content"> | </span>
       </div>
 
