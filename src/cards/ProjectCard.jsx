@@ -41,14 +41,28 @@ export const ProjectCard = ({ projectData }) => {
               })}
             </div>
 
-            <a
-              href={project.demo}
-              target="_blank"
-              className="block w-full mt-4 bg-neutral-100 text-neutral-900 text-center py-2 rounded-full hover:bg-neutral-300 transition"
-              onClick={e => e.stopPropagation()}
-            >
-              View Project
-            </a>
+            {project.buttonType === "demo" && project.demo && (
+              <a
+                href={project.demo}
+                target="_blank"
+                className="block w-full mt-4 bg-neutral-100 text-neutral-900 text-center py-2 rounded-full hover:bg-neutral-300 transition"
+                onClick={e => e.stopPropagation()}
+              >
+                View Project
+              </a>
+            )}
+
+            {project.buttonType === "github" && project.github && (
+              <a
+                href={project.github}
+                target="_blank"
+                className="block w-full mt-4 bg-neutral-100 text-neutral-900 text-center py-2 rounded-full hover:bg-neutral-300 transition"
+                onClick={e => e.stopPropagation()}
+              >
+                View GitHub
+              </a>
+            )}
+
           </div>
 
         </div>

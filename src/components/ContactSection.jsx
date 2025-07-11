@@ -89,9 +89,9 @@ export const ContactSection = () => {
           </div>
 
           <div
-            className="p-4 sm:p-6 md:p-8 bg-card w-full rounded max-w-[450px]"
+            className="p-4 sm:p-6 md:p-8 bg-card w-full max-w-[450px] bg-[#1E293B] rounded-2xl"
           >
-            <h3 className="text-center text-base-content text-xl font-bold mb-5">Send a Message</h3>
+            <h3 className="text-center text-white/80 text-xl font-bold mb-5">Send a Message</h3>
             <form ref={form} onSubmit={handleSubmit} className="flex flex-col justify-between">
               <input
                 id="name"
@@ -100,7 +100,7 @@ export const ContactSection = () => {
                 placeholder="Name"
                 required
                 autoComplete="off"
-                className="p-2 rounded bg-input placeholder-base-content/50 border border-base-content/50 mb-5 focus:outline-none focus:border-primary"
+                className="p-2 rounded bg-input placeholder-gray-400 border border-gray-400 mb-5 focus:outline-none focus:border-primary"
               />
               <input
                 id="email"
@@ -109,14 +109,14 @@ export const ContactSection = () => {
                 placeholder="example@mail.com"
                 required
                 autoComplete="off"
-                className="p-2 rounded bg-input placeholder-base-content/50 border border-base-content/50 mb-5 focus:outline-none focus:border-primary"
+                className="p-2 rounded bg-input placeholder-gray-400 border border-gray-400 mb-5 focus:outline-none focus:border-primary"
               />
               <textarea
                 id="message"
                 name="message"
                 placeholder="Message"
                 rows="5"
-                className="p-2 rounded bg-input placeholder-base-content/50 border border-base-content/50 mb-5 focus:outline-none focus:border-primary resize-none "
+                className="p-2 rounded bg-input placeholder-gray-400 border border-gray-400 mb-5 focus:outline-none focus:border-primary resize-none "
               ></textarea>
               <button
                 type="submit"

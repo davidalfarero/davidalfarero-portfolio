@@ -102,13 +102,15 @@ const FooterSection = () => {
       <div className="max-w-4xl mx-auto flex justify-between items-center gap-4">
         <p className="text-base-content/60 text-sm font-semibold">@ 2025. All Rights Reserved.</p>
 
-        <div className="cursor-pointer p-2 rounded-xl hover:bg-base-200 transition-colors">
+        <div className="cursor-pointer p-2 rounded-xl hover:bg-base-100 transition-colors">
           <a href="#home"><SquareChevronUp className="size-5 text-primary" /></a>
         </div>
 
-        <div className="flex gap-4">
-          <p className="text-base-content/60 text-xs">Terms of Use</p>
-          <p className="text-base-content/60 text-xs">Privacy Policy</p>
+        <div className="">
+          <p className="text-base-content/60 text-xs">This portfolio is open source.</p>
+          <p className="text-base-content/60 text-xs">
+            Check it out on <a href="https://github.com/davidalfarero/my-portfolio" target='_blank' className="hover:underline transition-all font-semibold">GitHub!</a>
+          </p>
         </div>
       </div>
 

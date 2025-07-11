@@ -32,7 +32,7 @@ export const ProjectPreview = ({ project, onClose }) => {
 
         <div className="relative h-full w-full grid-responsive overflow-y-auto">
 
-          <div className="absolute top-3 right-3 p-1 z-50 rounded-2xl bg-hover">
+          <div className="absolute top-3 right-3 p-1 z-50 rounded-2xl bg-hover hover:bg-gray-800 transition-colors">
             <X onClick={onClose} className="text-gray-300" />
           </div>
 
@@ -102,12 +102,23 @@ export const ProjectPreview = ({ project, onClose }) => {
             </div>
 
             <div className="mt-5 flex flex-col sm:flex-row gap-3">
-              <a href={project.github} target="_blank" className="w-full sm:w-auto p-2 rounded bg-primary text-white flex items-center justify-center gap-1">
-                Visit <Github size={20} />
-              </a>
-              <a href={project.demo} target="_blank" className="w-full sm:w-auto p-2 rounded border border-primary text-primary flex items-center justify-center gap-1">
-                Demo <ExternalLink size={20} />
-              </a>
+              {project.previewButton === 'both' && (
+                <>
+                  <a href={project.github} target="_blank" className="w-full sm:w-auto p-2 rounded bg-primary text-white flex items-center justify-center gap-1">
+                    Visit <Github size={20} />
+                  </a>
+                  <a href={project.demo} target="_blank" className="w-full sm:w-auto p-2 rounded border border-primary text-primary flex items-center justify-center gap-1">
+                    Demo <ExternalLink size={20} />
+                  </a>
+                </>
+              )}
+              {project.previewButton === 'github' && (
+                <>
+                  <a href={project.github} target="_blank" className="w-full sm:w-auto p-2 rounded bg-primary text-white flex items-center justify-center gap-1">
+                    Visit <Github size={20} />
+                  </a>
+                </>
+              )}
             </div>
           </div>
         </div>
