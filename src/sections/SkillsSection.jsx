@@ -11,7 +11,7 @@ export const SkillsSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-[40%_60%] gap-4">
           <div className="space-y-3">
             <h2 className="text-center text-base-content text-lg font-bold max-w-xs mx-auto">
-              Technologies and Tools 💻
+              💻 Technologies and Tools
             </h2>
             <p className="text-base-content/80 text-sm md:text-base">
               I build full-stack web applications with a focus on responsive design, clean architecture, and smooth user experience. <br /><br />

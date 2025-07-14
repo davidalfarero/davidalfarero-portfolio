@@ -21,22 +21,22 @@ export const AboutSection = () => {
     {
       Icon: CodeXml,
       title: 'Front-End Skills',
-      detail: 'I build responsive, accessible, and clean UIs using HTML, CSS, and JavaScript. Every line of code is written with user experience in mind'
+      detail: 'I build responsive, accessible UIs using modern tools with clean, maintainable code — always optimized for user experience.',
     },
     {
       Icon: Palette,
-      title: 'Eye for Design',
-      detail: 'I focus on clean layouts, thoughtful typography, and visual balance to create interfaces that are both functional and beautiful.'
+      title: 'Design-Savvy',
+      detail: 'I care about layout, spacing, and visual harmony to ensure every interface looks polished and performs smoothly.',
     },
     {
       Icon: Rocket,
-      title: 'Growth Mindset',
-      detail: 'Every project is a chance to learn something new. I continuously sharpen my skills and stay updated with the latest web trends.'
+      title: 'Always Learning',
+      detail: 'I stay sharp by exploring new frameworks, design systems, and coding patterns that improve my workflow and output.',
     },
     {
       Icon: UsersRound,
-      title: 'Collaboration Ready',
-      detail: 'I thrive in collaborative environments and value clear communication, feedback, and shared goals in every build.'
+      title: 'Team-First Developer',
+      detail: 'I thrive in team environments, communicate clearly, and believe in building with feedback, shared goals, and collaboration.',
     },
   ];
 
@@ -51,16 +51,13 @@ export const AboutSection = () => {
         >
           <div className="space-y-3">
             <h2 className="text-center text-base-content text-lg font-bold max-w-xs mx-auto">
-              Web Developer Focused on Clean Code & Smart Design
+              🧰 Clean Code & Smart Design
             </h2>
             <p className="text-base-content/80 text-sm md:text-base">
-              Driven by curiosity and a love for clean, functional design, I specialize in crafting responsive websites and dynamic user experiences.
-              My journey into web development began with a strong foundation in IT and has evolved into a deep commitment to building thoughtful, intuitive digital solutions.
-              <br></br><br></br> I’m constantly exploring new technologies and best practices to sharpen my skills and stay ahead in this fast-paced field.
-              Whether I’m fine-tuning front-end interfaces or diving into JavaScript logic, I bring energy, focus, and a problem-solving mindset to every line of code.
+              With a solid foundation in IT and a strong focus on web development, I build responsive, user-friendly interfaces and full-stack applications. I enjoy solving real problems through clean code, intuitive design, and efficient logic,always staying sharp by learning new tools and best practices.
             </p>
             <Button
-              href='/Alfarero_CV.pdf'
+              href='/David-Alfarero-Web-Developer-CV.pdf'
               target="_blank"
               className='w-fit bg-primary text-white mx-auto mt-10 '>
               Download CV
@@ -80,7 +77,7 @@ export const AboutSection = () => {
                 key={index}
                 variants={cardVariants}
                 transition={{ duration: 0.5 }}
-                className="max-w-[450px] mx-auto bg-primary/20 rounded-full p-3 flex items-center gap-3 shadow-lg"
+                className="max-w-[450px] mx-auto bg-primary/20 rounded-2xl p-3 flex items-center gap-3 shadow-lg"
               >
                 <div className="p-3 rounded-full bg-primary flex items-center justify-center">
                   <Icon className="text-white size-8" />
@@ -93,7 +90,6 @@ export const AboutSection = () => {
               </motion.div>
             ))}
           </motion.div>
-
 
         </div>
       </div>

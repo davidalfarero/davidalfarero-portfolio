@@ -44,7 +44,7 @@ export const HeroSection = () => {
           </div>
 
           <div className="hero-logo-wrapper">
-            <img src="/hero-logo(2).png" alt="Hero Logo" className="hero-logo" />
+            <img src="/hero-logo.webp" alt="Hero Logo" className="hero-logo" />
           </div>
         </div>
 
