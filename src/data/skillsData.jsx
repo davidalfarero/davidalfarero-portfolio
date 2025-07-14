@@ -1,4 +1,4 @@
-import { BrevoIcon, ChromeIcon, ClerkIcon, CloudinaryIcon, CSSIcon, DaisyIcon, ExpoIcon, ExpressIcon, GeminiIcon, GitHubIcon, GitIcon, HTMLIcon, JSIcon, JWTIcon, MongoDBIcon, NodeIcon, ReactIcon, SocketIcon, TawilwindIcon, VSCodeIcon } from "../icons/TechIcons";
+import { BrevoIcon, ChromeIcon, ClerkIcon, CloudinaryIcon, CSSIcon, DaisyIcon, ExpoIcon, ExpressIcon, GeminiIcon, GitHubIcon, GitIcon, HTMLIcon, JSIcon, JWTIcon, MongoDBIcon, NodeIcon, PostmanIcon, ReactIcon, SocketIcon, TawilwindIcon, VSCodeIcon } from "../components/TechIcons";
 
 export const skillsData = [
   {
@@ -50,6 +50,11 @@ export const skillsData = [
     Icon: DaisyIcon,
     name: 'DaisyUI',
     percent: '75%',
+  },
+  {
+    Icon: PostmanIcon,
+    name: 'Postman',
+    percent: '90%',
   },
   {
     Icon: GitHubIcon,

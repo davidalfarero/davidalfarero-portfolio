@@ -5,7 +5,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
-import { SwiperNavLeft, SwiperNavRight } from '../styles/UI';
+import { SwiperNavLeft, SwiperNavRight } from './UI';
 
 export const ProjectPreview = ({ project, onClose }) => {
   const prevRef = useRef(null);

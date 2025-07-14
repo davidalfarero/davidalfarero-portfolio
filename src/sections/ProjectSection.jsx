@@ -1,8 +1,6 @@
 import { useState } from 'react';
-import { ProjectCard } from "../cards/ProjectCard";
 import { projectData } from "../data/projectData";
-
-
+import { ProjectCard } from '../components/ProjectCard';
 
 export const ProjectSection = () => {
   const [isAllProjects, setIsAllProjects] = useState(false);

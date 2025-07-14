@@ -106,7 +106,7 @@ export const ContactSection = () => {
                 id="email"
                 type="email"
                 name="email"
-                placeholder="example@mail.com"
+                placeholder="Email"
                 required
                 autoComplete="off"
                 className="p-2 rounded bg-input placeholder-gray-400 border border-gray-400 mb-5 focus:outline-none focus:border-primary"

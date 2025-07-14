@@ -1,13 +1,13 @@
-import { AboutSection } from "@/components/AboutSection";
-import { ContactSection } from "@/components/ContactSection";
-import { HeroSection } from "@/components/HeroSection";
-import Navbar from "@/components/Navbar";
-import { ProjectSection } from "@/components/ProjectSection";
-import { SkillsSection } from "@/components/SkillsSection";
 import { ToastContainer } from 'react-toastify';
-import FooterSection from "./components/FooterSection";
 import { useState } from "react";
-import { LoadingScreen } from "./components/LoadingScreen";
+import { LoadingScreen } from "./sections/LoadingScreen";
+import { AboutSection } from "./sections/AboutSection";
+import { ContactSection } from "./sections/ContactSection";
+import { ProjectSection } from "./sections/ProjectSection";
+import { SkillsSection } from './sections/SkillsSection';
+import { HeroSection } from './sections/HeroSection';
+import Footer from './layout/Footer';
+import Navbar from './layout/Navbar';
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -21,7 +21,7 @@ function App() {
       <ProjectSection />
       <SkillsSection />
       <ContactSection />
-      <FooterSection />
+      <Footer />
       <ToastContainer
         position="bottom-right"
         autoClose={3000}

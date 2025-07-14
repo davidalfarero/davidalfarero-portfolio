@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ProjectPreview } from "../modals/ProjectPreview";
+import { ProjectPreview } from "./ProjectPreview";
 
 
 export const ProjectCard = ({ projectData }) => {

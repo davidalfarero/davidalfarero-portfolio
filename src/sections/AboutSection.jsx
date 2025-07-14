@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { ArrowDownToLine, CodeXml, Palette, Rocket, UsersRound } from 'lucide-react';
-import { Button } from '../styles/UI';
+import { Button } from '../components/UI';
 
 export const AboutSection = () => {
   const containerVariants = {
@@ -50,10 +50,10 @@ export const AboutSection = () => {
           className="grid grid-cols-1 md:grid-cols-2 gap-4"
         >
           <div className="space-y-3">
-            <h2 className="text-center text-base-content font-bold max-w-xs mx-auto">
+            <h2 className="text-center text-base-content text-lg font-bold max-w-xs mx-auto">
               Web Developer Focused on Clean Code & Smart Design
             </h2>
-            <p className="section-description">
+            <p className="text-base-content/80 text-sm md:text-base">
               Driven by curiosity and a love for clean, functional design, I specialize in crafting responsive websites and dynamic user experiences.
               My journey into web development began with a strong foundation in IT and has evolved into a deep commitment to building thoughtful, intuitive digital solutions.
               <br></br><br></br> I’m constantly exploring new technologies and best practices to sharpen my skills and stay ahead in this fast-paced field.

@@ -53,7 +53,7 @@ const FooterSection = () => {
             <p className="font-semibold text-sm mb-2">Social Links</p>
             <div className="flex gap-3 items-center">
               <a
-                href=""
+                href="https://github.com/davidalfarero"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-gray-800 p-2 rounded-full flex items-center justify-center w-10 h-10"
@@ -63,7 +63,7 @@ const FooterSection = () => {
               </a>
 
               <a
-                href=""
+                href="https://www.linkedin.com/in/david-alfarero/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-blue-500 p-2 rounded-full flex items-center justify-center w-10 h-10"
@@ -72,7 +72,7 @@ const FooterSection = () => {
                 <FaLinkedin className={iconClass} />
               </a>
 
-              <a
+              {/* <a
                 href=""
                 target="_blank"
                 rel="noopener noreferrer"
@@ -80,10 +80,10 @@ const FooterSection = () => {
                 aria-label="Upwork"
               >
                 <FaUpwork className={iconClass} />
-              </a>
+              </a> */}
 
               <a
-                href=""
+                href="https://www.facebook.com/davidalfarero"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-blue-500 p-2 rounded-full flex items-center justify-center w-10 h-10"

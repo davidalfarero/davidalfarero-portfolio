@@ -1,4 +1,4 @@
-import { BrevoIcon, DaisyIcon, ExpoIcon, ExpressIcon, JWTIcon, MongoDBIcon, NodeIcon, ReactIcon, SocketIcon, TawilwindIcon } from "../icons/TechIcons";
+import { BrevoIcon, DaisyIcon, ExpoIcon, ExpressIcon, JWTIcon, MongoDBIcon, NodeIcon, ReactIcon, SocketIcon, TawilwindIcon } from "../components/TechIcons";
 
 export const projectData = [
   {
