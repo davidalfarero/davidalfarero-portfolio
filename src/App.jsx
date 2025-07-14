@@ -1,6 +1,5 @@
 import { ToastContainer } from 'react-toastify';
 import { useState } from "react";
-import { LoadingScreen } from "./sections/LoadingScreen";
 import { AboutSection } from "./sections/AboutSection";
 import { ContactSection } from "./sections/ContactSection";
 import { ProjectSection } from "./sections/ProjectSection";
@@ -8,6 +7,7 @@ import { SkillsSection } from './sections/SkillsSection';
 import { HeroSection } from './sections/HeroSection';
 import Footer from './layout/Footer';
 import Navbar from './layout/Navbar';
+import { LoadingScreen } from './components/LoadingScreen';
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);

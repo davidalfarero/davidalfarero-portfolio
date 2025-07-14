@@ -1,7 +1,7 @@
-import { useTypewriter } from "@/Hook/useTypewriter";
 import { CircleChevronDown, Phone } from 'lucide-react';
 import { Button } from "../components/UI";
 import MetricCard from "../components/MetricCard";
+import { useTypewriter } from '../hooks/useTypewriter';
 
 export const HeroSection = () => {
   const typedText = useTypewriter([

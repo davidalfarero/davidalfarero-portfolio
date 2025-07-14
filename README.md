@@ -23,38 +23,32 @@ This site highlights my featured projects, tech skills, and developer journey.
 
 **Deployment**
 
-- Vercel
-
-<!-- Todo -->
-<!-- ## 📸 Screenshots -->
-
-<!-- | Hero Section                    | Project Modal                     |
-| ------------------------------- | --------------------------------- |
-| ![Hero](./screenshots/hero.png) | ![Modal](./screenshots/modal.png) |
-
-> 📁 _Screenshots go in the `/screenshots` folder for markdown previews._ -->
+- Netlify
 
 ## 📂 Project Structure
 
 ```bash
 portfolio/
-├── public/
-├── src/
-│   ├── components/
-│   ├── Hook/
-│   ├── icons/
-│   └── app.jsx
-├── package.json
-└── vite.config.js
+src/
+├── components/      # Reusable UI elements (loading screen, cards, modal, button, sliders)
+├── data/            # Scalable data for projects & skills
+├── hooks/           # Custom React hooks
+├── layout/          # Layout-level components (Navbar & Footer)
+├── sections/        # Page sections (Hero, About, Projects, Skills, & Contact)
+
+App.jsx              # Root component that renders all sections
+main.jsx             # Entry point for React + Vite
+index.css            # Global styles and Tailwind/DaisyUI setup
+
 
 ```
 
 ## 🧠 Author
 
 **David [@davidalfarero](https://github.com/davidalfarero)**  
-Frontend & Backend Developer
+Full Stack Developer
 
-Portfolio: [myportfolio.com](https://react-portfolio-nine-rust.vercel.app/)  
+Portfolio: [myportfolio.com](https://davidalfarero-portfolio.netlify.app/)  
 Email: [david.alfarero@gmail.com](mailto:david.alfarero@gmail.com)
 
 ## 📜 License
