@@ -57,7 +57,7 @@ export const AboutSection = () => {
               With a solid foundation in IT and a strong focus on web development, I build responsive, user-friendly interfaces and full-stack applications. I enjoy solving real problems through clean code, intuitive design, and efficient logic,always staying sharp by learning new tools and best practices.
             </p>
             <Button
-              href='/David-Alfarero-Web-Developer-CV.pdf'
+              href='/David_ALfarero_WD_CV.pdf'
               target="_blank"
               className='w-fit bg-primary text-white mx-auto mt-10 '>
               Download CV
