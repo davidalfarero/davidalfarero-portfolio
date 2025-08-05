@@ -48,7 +48,7 @@ const Navbar = () => {
         <div className='relative max-w-4xl mx-auto w-full flex items-center justify-between gap-4 px-5 md:px-0'>
           <a href='#home' className="text-lg">
             <div className="w-10">
-              <img src="/logo.svg" alt="Logo" />
+              <img src="/logo.webp" alt="Logo" />
             </div>
           </a>
 
