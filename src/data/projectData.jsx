@@ -1,4 +1,4 @@
-import { BrevoIcon, DaisyIcon, ExpoIcon, ExpressIcon, JWTIcon, MongoDBIcon, NodeIcon, ReactIcon, SocketIcon, TawilwindIcon } from "../components/TechIcons";
+import { BrevoIcon, DaisyIcon, ExpoIcon, ExpressIcon, JWTIcon, MongoDBIcon, NodeIcon, ReactIcon, ReactRouterIcon, SocketIcon, TawilwindIcon, TSIcon } from "../components/TechIcons";
 
 export const projectData = [
   {
@@ -72,5 +72,28 @@ export const projectData = [
     github: 'https://github.com/davidalfarero/wallet-mobile',
     buttonType: "github",
     previewButton: "github",
+  },
+
+  {
+    image: [
+      '/analyzr_app/analyzr-1.webp',
+      '/analyzr_app/analyzr-2.webp',
+      '/analyzr_app/analyzr-3.webp',
+      '/analyzr_app/analyzr-4.webp',
+      '/analyzr_app/analyzr-5.webp',
+      '/analyzr_app/analyzr-6.webp'
+    ],
+    Icon: [ReactRouterIcon, TSIcon, TawilwindIcon],
+    tags: ['React Router', 'TypeScript', 'TailwindCSS'],
+    title: 'Analyzr',
+    description:
+      'AI-powered resume analyzer for smarter job applications.',
+    details: `It offers intuitive, AI-powered feedback on resumes. You sign in, upload your resume, and the app previews it. It then generates feedback and an ATS score, highlighting strengths and areas to improve. It adapts to your visual preference with light or dark mode and protects your work behind secure routes.
+
+    Built with React, TailwindCSS, and TypeScript, Analyzr delivers responsive performance and sleek design. It relies on Zustand for state, React-dropzone for file handling, and PuterJS for backend storage. The codebase remains clean and modular with components, utilities, routing, and prompt templates clearly separated.`,
+    github: 'https://github.com/davidalfarero/ai-resume-analyzer',
+    demo: 'https://ai-resume-analyzer-blush-one.vercel.app/auth?next=/',
+    buttonType: "demo",
+    previewButton: "both",
   },
 ];

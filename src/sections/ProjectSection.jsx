@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import { projectData } from "../data/projectData";
 import { ProjectCard } from '../components/ProjectCard';
+import { ChevronDown, ChevronUp } from 'lucide-react';
+import { Button } from '../components/UI';
 
 export const ProjectSection = () => {
   const [isAllProjects, setIsAllProjects] = useState(false);
-  const visibleProjects = isAllProjects ? projectData : projectData.slice(0, 3);
+  const visibleProjects = isAllProjects ? projectData : projectData.slice(0, 2);
 
   return (
     <section id="projects" className="p-2 bg-base-100">
@@ -15,10 +17,10 @@ export const ProjectSection = () => {
         <ProjectCard projectData={visibleProjects} />
 
         {/* See more button */}
-        {/* <button className="secondary-btn mx-auto" onClick={() => setIsAllProjects(prev => !prev)}>
+        <Button className="border border-primary text-primary w-fit mx-auto" onClick={() => setIsAllProjects(prev => !prev)}>
           {isAllProjects ? 'Collapse' : 'Explore More Projects'}
           {isAllProjects ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
-        </button> */}
+        </Button>
       </div>
     </section>
   );
